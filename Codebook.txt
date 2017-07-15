@@ -1,0 +1,58 @@
+
+# CodeBook
+
+# Data source
+
+http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+
+# Data
+
+The data linked to from the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone.
+
+The dataset includes the following files:
+
+'README.txt'
+
+'features_info.txt': Shows information about the variables used on the feature vector.
+
+'features.txt': List of all features.
+
+'activity_labels.txt': Links the class labels with their activity name.
+
+'train/X_train.txt': Training set.
+
+'train/y_train.txt': Training labels.
+
+'test/X_test.txt': Test set.
+
+'test/y_test.txt': Test labels.
+
+# Data transformation
+
+For data transformation this R script called run_analysis.R was created and that does the following:
+
+1. Merge the training and the test sets to create one data set
+2. Extract only the measurements on the mean and standard deviation for each measurement
+3. Use descriptive activity names to name the activities in the data set
+4. Appropriately labels the data set with descriptive variable names
+5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
+
+# Run_analysis.R mechanism: 
+
+'Loading R packages needed for this script (data.table, plyr, dplyr)
+
+'Download and unzipping of datasets
+
+'Reading training, test and feature tables
+
+'Assign column names to the train and test data
+
+'Merge training and test data sets
+
+'Extract mean and standard deviation for each measurement
+
+'Use descriptive activity names to name the activities in the data set
+
+'Label the data set with descriptive variable names
+
+'Create a second, independent tidy data set with the average of each variable for each activity and each subject
