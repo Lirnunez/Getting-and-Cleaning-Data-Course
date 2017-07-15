@@ -62,5 +62,5 @@ names(HAR_mean_std)<-gsub("^f", "frequency", names(HAR_mean_std))
 
 # 5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject
 tydy_Merged_train_test <- ddply(HAR_mean_std, c("subjectId","activityId", "activityType"), numcolwise(mean))
-write.csv(tydy_Merged_train_test, file="tidydata.csv")
+write.table(tydy_Merged_train_test, file="tidydata.txt", row.name = FALSE)
 
